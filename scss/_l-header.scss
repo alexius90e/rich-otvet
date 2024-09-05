@@ -1,2 +1,185 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 480px;
+  overflow: hidden;
+  background: url(../assets/header-bg.png) center bottom no-repeat;
+
+  @include desktopfhd {
+    min-height: 360px;
+    background-size: 1920px;
+    background-position: left bottom;
+  }
+
+  @include desktop {
+    min-height: 240px;
+  }
+
+  @include laptoplg {
+    min-height: 200px;
+    background-size: 1080px;
+  }
+
+  @include tablet {
+    min-height: 180px;
+  }
+
+  @include mobile {
+    min-height: 158px;
+  }
+
+  & .container {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 128px;
+
+    @include desktopfhd {
+      padding-top: 100px;
+    }
+
+    @include desktop {
+      padding-top: 56px;
+    }
+
+    @include laptoplg {
+      padding-top: 40px;
+    }
+
+    @include laptop {
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 24px;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 82px;
+    left: 50%;
+    width: fit-content;
+    transform: translate3d(-50%, 0, 0);
+
+    @include desktopfhd {
+      top: 72px;
+    }
+
+    @include desktop {
+      top: 42px;
+    }
+
+    @include laptoplg {
+      top: 32px;
+    }
+
+    @include laptop {
+      position: static;
+      transform: none;
+    }
+
+    &-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &-image {
+        display: block;
+        max-width: 100%;
+        width: 480px;
+        height: auto;
+
+        @include desktopfhd {
+          width: 400px;
+        }
+
+        @include desktop {
+          width: 300px;
+        }
+
+        @include laptoplg {
+          width: 200px;
+        }
+
+        @include laptop {
+          width: 216px;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 103px;
+
+    @include desktopfhd {
+      gap: 70px;
+    }
+
+    @include desktop {
+      gap: 50px;
+    }
+
+    @include laptoplg {
+      gap: 38px;
+    }
+
+    @include laptop {
+      display: none;
+    }
+
+    &-link {
+      font-weight: 400;
+      font-size: 28px;
+      line-height: 110%;
+      color: #000;
+      transition-property: color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.1s;
+
+      @include desktopfhd {
+        font-size: 24px;
+      }
+
+      @include desktop {
+        font-size: 20px;
+        line-height: 143%;
+      }
+
+      @include laptoplg {
+        font-size: 14px;
+        line-height: 143%;
+      }
+
+      &:hover {
+        color: #9b7113;
+      }
+    }
+  }
+
+  &__burger {
+    flex: 0 0 auto;
+    display: none;
+    width: 55px;
+    height: 55px;
+    background: url(../assets/burger.svg) center no-repeat;
+    background-color: #9b7113;
+    transition-property: background-color, transform;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s;
+    cursor: pointer;
+
+    @include laptop {
+      display: block;
+    }
+
+    &:hover {
+      background-color: #825d0f;
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+  }
 }
