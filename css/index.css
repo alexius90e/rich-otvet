@@ -254,13 +254,13 @@ img {
 }
 
 .main {
-  max-width: 2558px;
-  margin: 0 auto;
   overflow: hidden;
 }
 
 .self-manifestation {
   position: relative;
+  max-width: 2558px;
+  margin: 0 auto;
   padding-top: 566px;
   padding-bottom: 68px;
   background: url(../assets/main-bg.svg) top -1100px right -500px no-repeat;
@@ -381,19 +381,24 @@ img {
   flex-direction: column;
   flex: 1 1 1138px;
   gap: 50px;
-  padding-top: 88px;
+  padding: 88px 0 136px;
 }
 @media (max-width: 1440px) {
   .self-manifestation__content {
     gap: 24px;
-    padding-top: 36px;
+    padding: 36px 0 102px;
+  }
+}
+@media (max-width: 992px) {
+  .self-manifestation__content {
+    padding: 36px 0 60px;
   }
 }
 @media (max-width: 768px) {
   .self-manifestation__content {
     flex: 0 1 auto;
     gap: 14px;
-    padding-top: 0;
+    padding: 0;
   }
 }
 .self-manifestation__title {
@@ -451,4 +456,75 @@ img {
     font-size: 12px;
     line-height: 150%;
   }
+}
+
+.rich-video {
+  margin: 0 0 160px;
+}
+@media (max-width: 1080px) {
+  .rich-video {
+    margin: 0 0 41px;
+  }
+}
+@media (max-width: 576px) {
+  .rich-video {
+    margin: 0 0 35px;
+  }
+}
+@media (max-width: 768px) {
+  .rich-video .container {
+    padding: 0;
+  }
+}
+.rich-video__wrapper {
+  position: relative;
+}
+.rich-video__content {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  aspect-ratio: 1.786525/1;
+  background: url(../assets/rich-logo.svg) center no-repeat;
+  background-color: #06223e;
+}
+@media (max-width: 1920px) {
+  .rich-video__content {
+    background-size: 44%;
+  }
+}
+.rich-video__bg {
+  position: absolute;
+  top: -60px;
+  right: -27px;
+  z-index: 1;
+  width: calc(100% - 60px);
+  aspect-ratio: 1.849678/1;
+  background: #9b7113;
+  transform: rotate(-7deg);
+}
+@media (max-width: 1440px) {
+  .rich-video__bg {
+    top: -24px;
+    right: -11px;
+    width: calc(100% - 26px);
+  }
+}
+@media (max-width: 768px) {
+  .rich-video__bg {
+    top: -8px;
+    left: 50%;
+    right: auto;
+    width: calc(100% - 10px);
+    transform: translateX(-50%) rotate(-4deg);
+  }
+}
+.rich-video__bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 12.2%;
+  border-radius: 0 0 40px 40px;
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
 }

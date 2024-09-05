@@ -1,5 +1,7 @@
 .self-manifestation {
   position: relative;
+  max-width: 2558px;
+  margin: 0 auto;
   padding-top: 566px;
   padding-bottom: 68px;
   background: url(../assets/main-bg.svg) top -1100px right -500px no-repeat;
@@ -65,9 +67,8 @@
       bottom: 100px;
       width: 372px;
       height: 372px;
-      transform: scale(-1, 1)
+      transform: scale(-1, 1);
     }
-
   }
 
   & .container {
@@ -113,17 +114,21 @@
     flex-direction: column;
     flex: 1 1 1138px;
     gap: 50px;
-    padding-top: 88px;
+    padding: 88px 0 136px;
 
     @include desktop {
       gap: 24px;
-      padding-top: 36px;
+      padding: 36px 0 102px;
+    }
+
+    @include laptop {
+      padding: 36px 0 60px;
     }
 
     @include tablet {
       flex: 0 1 auto;
       gap: 14px;
-      padding-top: 0;
+      padding: 0;
     }
   }
 

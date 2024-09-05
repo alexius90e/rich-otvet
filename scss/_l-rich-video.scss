@@ -1,0 +1,70 @@
+.rich-video {
+  margin: 0 0 160px;
+
+  @include laptoplg {
+    margin: 0 0 41px;
+  }
+
+  @include mobile {
+    margin: 0 0 35px;
+  }
+
+  & .container {
+    @include tablet {
+      padding: 0;
+    }
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    aspect-ratio: 1.786525 / 1;
+    background: url(../assets/rich-logo.svg) center no-repeat;
+    background-color: #06223e;
+
+    @include desktopfhd {
+      background-size: 44%;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    top: -60px;
+    right: -27px;
+    z-index: 1;
+    width: calc(100% - 60px);
+    aspect-ratio: 1.849678 / 1;
+    background: #9b7113;
+    transform: rotate(-7deg);
+
+    @include desktop {
+      top: -24px;
+      right: -11px;
+      width: calc(100% - 26px);
+    }
+
+    @include tablet {
+      top: -8px;
+      left: 50%;
+      right: auto;
+      width: calc(100% - 10px);
+      transform: translateX(-50%) rotate(-4deg);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 12.2%;
+      border-radius: 0 0 40px 40px;
+      box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
+    }
+  }
+}
