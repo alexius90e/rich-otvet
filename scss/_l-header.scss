@@ -52,6 +52,7 @@
     @include laptop {
       align-items: center;
       justify-content: space-between;
+      gap: 36px;
       padding-top: 24px;
     }
   }
@@ -127,7 +128,15 @@
     }
 
     @include laptop {
-      display: none;
+      // display: none;
+    }
+
+    @include mobile {
+      flex: 0 0 auto;
+      align-items: flex-end;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 4px;
     }
 
     &-link {
@@ -151,6 +160,10 @@
       @include laptoplg {
         font-size: 14px;
         line-height: 143%;
+      }
+
+      @include mobile {
+        line-height: 130%;
       }
 
       &:hover {

@@ -113,6 +113,7 @@ img {
   .header .container {
     align-items: center;
     justify-content: space-between;
+    gap: 36px;
     padding-top: 24px;
   }
 }
@@ -195,9 +196,13 @@ img {
     gap: 38px;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   .header__nav {
-    display: none;
+    flex: 0 0 auto;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 4px;
   }
 }
 .header__nav-link {
@@ -224,6 +229,11 @@ img {
   .header__nav-link {
     font-size: 14px;
     line-height: 143%;
+  }
+}
+@media (max-width: 576px) {
+  .header__nav-link {
+    line-height: 130%;
   }
 }
 .header__nav-link:hover {
@@ -335,6 +345,14 @@ img {
     width: 372px;
     height: 372px;
     transform: scale(-1, 1);
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation::before {
+    right: -190px;
+    bottom: 120px;
+    width: 360px;
+    height: 360px;
   }
 }
 .self-manifestation .container {

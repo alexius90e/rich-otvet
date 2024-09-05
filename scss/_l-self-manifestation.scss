@@ -69,6 +69,13 @@
       height: 372px;
       transform: scale(-1, 1);
     }
+
+    @include tablet {
+      right: -190px;
+      bottom: 120px;
+      width: 360px;
+      height: 360px;
+    }
   }
 
   & .container {
