@@ -1,0 +1,179 @@
+.self-manifestation {
+  position: relative;
+  padding-top: 566px;
+  padding-bottom: 68px;
+  background: url(../assets/main-bg.svg) top -1100px right -500px no-repeat;
+
+  @include desktopfhd {
+    padding-top: 440px;
+    background-position: top -1100px right -600px;
+  }
+
+  @include desktop {
+    padding-top: 290px;
+    padding-bottom: 34px;
+    background-position: top -900px right -600px;
+    background-size: 1920px;
+  }
+
+  @include laptoplg {
+    padding-top: 205px;
+    background-position: top -450px right -200px;
+    background-size: 1080px;
+  }
+
+  @include tablet {
+    padding-top: 250px;
+    padding-bottom: 41px;
+    background-position: top -260px right -175px;
+    background-size: 740px;
+  }
+
+  @include mobile {
+    padding-top: 225px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 62px;
+    right: -620px;
+    z-index: 1;
+    display: block;
+    width: 1015px;
+    height: 1007px;
+    background: url(../assets/cherry.png) center no-repeat;
+    background-size: cover;
+
+    @include desktop {
+      top: 120px;
+      right: -300px;
+      width: 500px;
+      height: 500px;
+    }
+
+    @include laptoplg {
+      top: 15px;
+      right: -243px;
+      width: 398px;
+      height: 395px;
+    }
+
+    @include tablet {
+      top: auto;
+      right: -184px;
+      bottom: 100px;
+      width: 372px;
+      height: 372px;
+      transform: scale(-1, 1)
+    }
+
+  }
+
+  & .container {
+    display: flex;
+    gap: 82px;
+
+    @include desktop {
+      gap: 52px 40px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__figure {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 1138px;
+
+    @include tablet {
+      flex: 0 1 auto;
+    }
+
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include tablet {
+        width: calc(100% - 100px);
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 1138px;
+    gap: 50px;
+    padding-top: 88px;
+
+    @include desktop {
+      gap: 24px;
+      padding-top: 36px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      gap: 14px;
+      padding-top: 0;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px;
+    text-transform: uppercase;
+    color: #cc9e46;
+
+    @include desktopfhd {
+      font-size: 48px;
+    }
+
+    @include desktop {
+      font-size: 36px;
+    }
+
+    @include laptoplg {
+      font-size: 26px;
+    }
+
+    @include tablet {
+      font-size: 24px;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #000;
+
+    @include desktopfhd {
+      font-size: 28px;
+    }
+
+    @include desktop {
+      font-size: 22px;
+    }
+
+    @include laptoplg {
+      font-size: 14px;
+      line-height: 143%;
+    }
+
+    @include tablet {
+      font-size: 12px;
+      line-height: 150%;
+    }
+  }
+}

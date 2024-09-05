@@ -55,6 +55,7 @@ img {
   top: 0;
   left: 0;
   right: 0;
+  z-index: 100;
   min-height: 480px;
   overflow: hidden;
   background: url(../assets/header-bg.png) center bottom no-repeat;
@@ -250,4 +251,204 @@ img {
 }
 .header__burger:active {
   transform: scale(0.98);
+}
+
+.main {
+  max-width: 2558px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.self-manifestation {
+  position: relative;
+  padding-top: 566px;
+  padding-bottom: 68px;
+  background: url(../assets/main-bg.svg) top -1100px right -500px no-repeat;
+}
+@media (max-width: 1920px) {
+  .self-manifestation {
+    padding-top: 440px;
+    background-position: top -1100px right -600px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-manifestation {
+    padding-top: 290px;
+    padding-bottom: 34px;
+    background-position: top -900px right -600px;
+    background-size: 1920px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-manifestation {
+    padding-top: 205px;
+    background-position: top -450px right -200px;
+    background-size: 1080px;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation {
+    padding-top: 250px;
+    padding-bottom: 41px;
+    background-position: top -260px right -175px;
+    background-size: 740px;
+  }
+}
+@media (max-width: 576px) {
+  .self-manifestation {
+    padding-top: 225px;
+  }
+}
+.self-manifestation::before {
+  content: "";
+  position: absolute;
+  top: 62px;
+  right: -620px;
+  z-index: 1;
+  display: block;
+  width: 1015px;
+  height: 1007px;
+  background: url(../assets/cherry.png) center no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1440px) {
+  .self-manifestation::before {
+    top: 120px;
+    right: -300px;
+    width: 500px;
+    height: 500px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-manifestation::before {
+    top: 15px;
+    right: -243px;
+    width: 398px;
+    height: 395px;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation::before {
+    top: auto;
+    right: -184px;
+    bottom: 100px;
+    width: 372px;
+    height: 372px;
+    transform: scale(-1, 1);
+  }
+}
+.self-manifestation .container {
+  display: flex;
+  gap: 82px;
+}
+@media (max-width: 1440px) {
+  .self-manifestation .container {
+    gap: 52px 40px;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation .container {
+    flex-direction: column;
+  }
+}
+.self-manifestation__figure {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 1138px;
+}
+@media (max-width: 768px) {
+  .self-manifestation__figure {
+    flex: 0 1 auto;
+  }
+}
+.self-manifestation__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .self-manifestation__figure-image {
+    width: calc(100% - 100px);
+  }
+}
+.self-manifestation__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 1138px;
+  gap: 50px;
+  padding-top: 88px;
+}
+@media (max-width: 1440px) {
+  .self-manifestation__content {
+    gap: 24px;
+    padding-top: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation__content {
+    flex: 0 1 auto;
+    gap: 14px;
+    padding-top: 0;
+  }
+}
+.self-manifestation__title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: #cc9e46;
+}
+@media (max-width: 1920px) {
+  .self-manifestation__title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-manifestation__title {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-manifestation__title {
+    font-size: 26px;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation__title {
+    font-size: 24px;
+  }
+}
+.self-manifestation__text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #000;
+}
+@media (max-width: 1920px) {
+  .self-manifestation__text {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-manifestation__text {
+    font-size: 22px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-manifestation__text {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+@media (max-width: 768px) {
+  .self-manifestation__text {
+    font-size: 12px;
+    line-height: 150%;
+  }
 }
