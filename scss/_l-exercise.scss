@@ -1,12 +1,12 @@
 .exercise {
-  padding: 160px 0 0;
+  padding: 160px 0 20px;
 
   @include laptoplg {
-    padding: 41px 0 0;
+    padding: 41px 0 20px;
   }
 
   @include tablet {
-    padding: 35px 0 300px;
+    padding: 35px 0 20px;
   }
 
   & .container {
@@ -93,7 +93,6 @@
 
       @include mobile {
         bottom: -240px;
-        // transform: rotate(0deg);
       }
     }
   }
@@ -149,6 +148,10 @@
     text-align: center;
     color: #000;
 
+    @include desktopfhd {
+      max-width: 1200px;
+    }
+
     @include laptoplg {
       max-width: 620px;
       margin: 0 auto 40px;
@@ -156,7 +159,7 @@
     }
 
     @include tablet {
-      margin: 0 auto 36px;
+      margin: 0 0 36px;
       text-align: left;
     }
   }

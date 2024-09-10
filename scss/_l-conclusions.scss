@@ -1,0 +1,405 @@
+.conclusions {
+  position: relative;
+  z-index: 5;
+
+  & .container {
+    position: relative;
+    padding-top: 244px;
+    padding-bottom: 160px;
+
+    @include laptoplg {
+      padding-top: 54px;
+      padding-bottom: 74px;
+    }
+
+    @include tablet {
+      padding-top: 95px;
+      padding-bottom: 192px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 60px;
+      left: -480px;
+      z-index: -1;
+      display: block;
+      width: 782px;
+      aspect-ratio: 88 / 80;
+      background: url(../assets/cherry2.webp) center / cover no-repeat;
+      transform: rotate(-30deg);
+
+      @include desktop {
+        width: 520px;
+        left: -300px;
+      }
+
+      @include laptoplg {
+        width: 360px;
+        left: -200px;
+        bottom: 40px;
+      }
+
+      @include tablet {
+        width: 306px;
+        left: -110px;
+        bottom: -40px;
+        transform: scale(-1, 1) rotate(-10deg);
+      }
+
+      @include mobile {
+        bottom: -120px;
+      }
+    }
+  }
+
+  &__title {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0 0 90px;
+    font-weight: 700;
+    font-size: 84px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+
+    @include laptoplg {
+      margin: 0 0 38px;
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin: 0 0 48px;
+      text-align: left;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: block;
+    max-width: 1706px;
+    width: 100%;
+    padding: 160px 0;
+    margin: 0 auto 90px;
+    aspect-ratio: 1.773388 / 1;
+    box-sizing: border-box;
+    background: url(../assets/logo.svg) bottom 64px center / 492px no-repeat,
+      url(../assets/marble-bg-min.webp) center repeat;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+
+    @include desktopfhd {
+      max-width: 1320px;
+      padding: 150px 0;
+    }
+
+    @include desktop {
+      max-width: 992px;
+      padding: 85px 0;
+      background: url(../assets/logo.svg) bottom 36px center / 226px no-repeat,
+        url(../assets/marble-bg-min.webp) center repeat;
+    }
+
+    @include laptoplg {
+      max-width: 706px;
+      margin: 0 auto 57px;
+    }
+
+    @include tablet {
+      min-height: 528px;
+      padding: 100px 0 120px;
+      margin: 0 auto 36px;
+      aspect-ratio: auto;
+      background: url(../assets/logo.svg) bottom 62px center / 226px no-repeat,
+        url(../assets/marble-bg-min.webp) center repeat;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
+      background: #5b8073;
+      transform: rotate(3deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: -159px;
+      left: -110px;
+      z-index: -2;
+      display: block;
+      width: 570px;
+      aspect-ratio: 0.92822 / 1;
+      background: url(../assets/conclusions-picture.svg) center / cover no-repeat;
+      transform: rotate(-16deg);
+
+      @include desktopfhd {
+        width: 470px;
+      }
+
+      @include desktop {
+        width: 370px;
+      }
+
+      @include laptoplg {
+        top: -92px;
+        left: -64px;
+        width: 270px;
+      }
+
+      @include tablet {
+        top: -60px;
+        left: auto;
+        right: -16px;
+        z-index: -1;
+        width: 210px;
+        transform: rotate(-12deg);
+      }
+    }
+
+    &-controls {
+      @include tablet {
+        position: absolute;
+        top: 24px;
+        left: 20px;
+        right: 20px;
+        display: flex;
+        gap: 14px;
+      }
+
+      &-prev,
+      &-next {
+        position: absolute;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        aspect-ratio: 1 / 0.88;
+        z-index: 20;
+        border-bottom: 3px solid #cca455;
+        border-radius: 10px;
+        background-color: rgba($color: #cca455, $alpha: 0.05);
+        transform: translate3d(0, -50%, 0);
+        transition-property: background-color, border-color;
+        transition-timing-function: ease-in-out;
+        transition-duration: 0.1s;
+        user-select: none;
+        cursor: pointer;
+
+        @include desktopfhd {
+          width: 80px;
+        }
+
+        @include desktop {
+          width: 60px;
+          border-width: 2px;
+        }
+
+        @include laptoplg {
+          width: 42px;
+        }
+
+        @include tablet {
+          position: static;
+          width: 52px;
+          transform: translate3d(0, 0, 0);
+        }
+
+        &:hover {
+          border-color: #5b8073;
+          background-color: rgba($color: #cca455, $alpha: 1);
+        }
+
+        &.swiper-button-disabled {
+          display: none;
+
+          @include tablet {
+            display: flex;
+            opacity: 0.5;
+          }
+
+          &:hover {
+            border-color: #cca455;
+            background-color: rgba($color: #cca455, $alpha: 0.05);
+          }
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: 44px;
+          aspect-ratio: 1 / 1;
+          background: url(../assets/arrow-right.svg) center / cover no-repeat;
+          transition-property: filter;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.1s;
+
+          @include desktopfhd {
+            width: 38px;
+          }
+
+          @include desktop {
+            width: 32px;
+          }
+
+          @include laptoplg {
+            width: 26px;
+          }
+        }
+
+        &:hover::before {
+          filter: brightness(100);
+        }
+
+        &.swiper-button-disabled:hover::before {
+          filter: brightness(1);
+        }
+      }
+
+      &-prev {
+        left: 80px;
+        border-right: 3px solid #cca455;
+
+        @include desktopfhd {
+          left: 60px;
+        }
+
+        @include desktop {
+          left: 50px;
+        }
+
+        @include laptoplg {
+          left: 32px;
+        }
+
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+
+      &-next {
+        right: 80px;
+        border-left: 3px solid #cca455;
+
+        @include desktopfhd {
+          right: 60px;
+        }
+
+        @include desktop {
+          right: 50px;
+        }
+
+        @include laptoplg {
+          right: 32px;
+        }
+      }
+    }
+
+    & .swiper {
+      height: 100%;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 0 200px;
+
+    @include desktopfhd {
+      padding: 0 160px;
+    }
+
+    @include laptoplg {
+      padding: 0 110px;
+    }
+
+    @include tablet {
+      padding: 0 20px;
+      min-height: calc(528px - 220px);
+    }
+
+    &-text {
+      max-width: 896px;
+      font-family: 'Merriweather', sans-serif;
+      font-weight: 400;
+      font-size: 48px;
+      text-align: center;
+      color: #000;
+
+      @include desktopfhd {
+        font-size: 40px;
+      }
+
+      @include desktop {
+        font-size: 28px;
+      }
+
+      @include laptoplg {
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    max-width: 1706px;
+    margin: 0 auto;
+
+    @include desktopfhd {
+      max-width: 1320px;
+    }
+
+    @include desktop {
+      max-width: 992px;
+    }
+
+    @include laptoplg {
+      max-width: 706px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    &-link {
+      padding: 30px 72px;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #c3a266;
+      border: 2px solid #c3a266;
+      border-radius: 6px;
+      background-color: #ffffff;
+      transition-property: background-color, color, transform;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.1s;
+      user-select: none;
+      cursor: pointer;
+
+      @include desktop {
+        padding: 12px 14px;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      &:hover {
+        background-color: #c3a266;
+        color: #ffffff;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}
