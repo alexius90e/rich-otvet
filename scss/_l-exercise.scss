@@ -6,7 +6,96 @@
   }
 
   @include tablet {
-    padding: 35px 0 0;
+    padding: 35px 0 300px;
+  }
+
+  & .container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -410px;
+      z-index: -1;
+      display: block;
+      width: 1000px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/cherry.png) center / cover no-repeat;
+      transform: rotate(45deg);
+
+      @include desktopfhd {
+        top: 80px;
+        left: -310px;
+        width: 800px;
+      }
+
+      @include desktop {
+        top: 120px;
+        left: -300px;
+        width: 700px;
+      }
+
+      @include laptoplg {
+        top: -40px;
+        left: -200px;
+        width: 480px;
+        transform: rotate(-45deg) scale(-1, 1);
+      }
+
+      @include tablet {
+        top: 100px;
+        left: -170px;
+        width: 360px;
+      }
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -140px;
+      right: -460px;
+      z-index: -1;
+      display: block;
+      width: 1000px;
+      aspect-ratio: 1 / 1;
+      background: url(../assets/cherry.png) center / cover no-repeat;
+      transform: rotate(45deg);
+
+      @include desktopfhd {
+        bottom: 120px;
+        right: -380px;
+        width: 800px;
+      }
+
+      @include desktop {
+        bottom: 240px;
+        right: -300px;
+        width: 640px;
+      }
+
+      @include laptoplg {
+        bottom: 80px;
+        right: -200px;
+        width: 480px;
+      }
+
+      @include tablet {
+        bottom: 100px;
+        right: -170px;
+        width: 400px;
+        
+      }
+
+      @include mobile {
+        bottom: -240px;
+        // transform: rotate(0deg);
+      }
+    }
   }
 
   &__tag {
@@ -61,6 +150,7 @@
     color: #000;
 
     @include laptoplg {
+      max-width: 620px;
       margin: 0 auto 40px;
       font-size: 24px;
     }

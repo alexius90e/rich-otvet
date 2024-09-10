@@ -554,7 +554,101 @@ img {
 }
 @media (max-width: 768px) {
   .exercise {
-    padding: 35px 0 0;
+    padding: 35px 0 300px;
+  }
+}
+.exercise .container {
+  position: relative;
+}
+.exercise .container::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: -410px;
+  z-index: -1;
+  display: block;
+  width: 1000px;
+  aspect-ratio: 1/1;
+  background: url(../assets/cherry.png) center/cover no-repeat;
+  transform: rotate(45deg);
+}
+@media (max-width: 1920px) {
+  .exercise .container::before {
+    top: 80px;
+    left: -310px;
+    width: 800px;
+  }
+}
+@media (max-width: 1440px) {
+  .exercise .container::before {
+    top: 120px;
+    left: -300px;
+    width: 700px;
+  }
+}
+@media (max-width: 1080px) {
+  .exercise .container::before {
+    top: -40px;
+    left: -200px;
+    width: 480px;
+    transform: rotate(-45deg) scale(-1, 1);
+  }
+}
+@media (max-width: 768px) {
+  .exercise .container::before {
+    top: 100px;
+    left: -170px;
+    width: 360px;
+  }
+}
+@media (max-width: 576px) {
+  .exercise .container::before {
+    display: none;
+  }
+}
+.exercise .container::after {
+  content: "";
+  position: absolute;
+  bottom: -140px;
+  right: -460px;
+  z-index: -1;
+  display: block;
+  width: 1000px;
+  aspect-ratio: 1/1;
+  background: url(../assets/cherry.png) center/cover no-repeat;
+  transform: rotate(45deg);
+}
+@media (max-width: 1920px) {
+  .exercise .container::after {
+    bottom: 120px;
+    right: -380px;
+    width: 800px;
+  }
+}
+@media (max-width: 1440px) {
+  .exercise .container::after {
+    bottom: 240px;
+    right: -300px;
+    width: 640px;
+  }
+}
+@media (max-width: 1080px) {
+  .exercise .container::after {
+    bottom: 80px;
+    right: -200px;
+    width: 480px;
+  }
+}
+@media (max-width: 768px) {
+  .exercise .container::after {
+    bottom: 100px;
+    right: -170px;
+    width: 400px;
+  }
+}
+@media (max-width: 576px) {
+  .exercise .container::after {
+    bottom: -240px;
   }
 }
 .exercise__tag {
@@ -613,6 +707,7 @@ img {
 }
 @media (max-width: 1080px) {
   .exercise__description {
+    max-width: 620px;
     margin: 0 auto 40px;
     font-size: 24px;
   }
