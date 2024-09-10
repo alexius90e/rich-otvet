@@ -1,4 +1,6 @@
 .exercise {
+  position: relative;
+  z-index: 5;
   padding: 160px 0 20px;
 
   @include laptoplg {
@@ -88,7 +90,6 @@
         bottom: 100px;
         right: -170px;
         width: 400px;
-        
       }
 
       @include mobile {
@@ -165,6 +166,8 @@
   }
 
   &__steps {
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -188,13 +191,11 @@
     }
 
     &-card {
+      position: relative;
       display: flex;
       flex-direction: column;
       flex: 0 0 calc(100% / 3 - 80px / 3 * 2);
-      aspect-ratio: 1.0167 / 1;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+      aspect-ratio: 730 / 718;
 
       @include desktopfhd {
         flex: 0 0 calc(100% / 3 - 32px / 3 * 2);
@@ -209,24 +210,151 @@
         max-width: 420px;
       }
 
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        display: block;
+        width: 100%;
+        aspect-ratio: 730 / 460;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transition: transform ease-in-out 0.1s;
+        pointer-events: none;
+      }
+
       &:nth-child(5n + 1) {
-        background-image: url(../assets/envelope-green.svg);
+        z-index: 1;
+
+        &::before {
+          background-image: url(../assets/envelope-green.svg);
+        }
+
+        &::after {
+          background-image: url(../assets/envelope-green-corner.svg);
+        }
       }
 
       &:nth-child(5n + 2) {
-        background-image: url(../assets/envelope-yellow.svg);
+        z-index: 2;
+
+        &::before {
+          background-image: url(../assets/envelope-yellow.svg);
+        }
+
+        &::after {
+          background-image: url(../assets/envelope-yellow-corner.svg);
+        }
       }
 
       &:nth-child(5n + 3) {
-        background-image: url(../assets/envelope-brown.svg);
+        z-index: 3;
+
+        &::before {
+          background-image: url(../assets/envelope-brown.svg);
+        }
+
+        &::after {
+          background-image: url(../assets/envelope-brown-corner.svg);
+        }
       }
 
       &:nth-child(5n + 4) {
-        background-image: url(../assets/envelope-white.svg);
+        z-index: 4;
+
+        &::before {
+          background-image: url(../assets/envelope-white.svg);
+        }
+
+        &::after {
+          background-image: url(../assets/envelope-white-corner.svg);
+        }
       }
 
       &:nth-child(5n + 5) {
-        background-image: url(../assets/envelope-blue.svg);
+        z-index: 5;
+
+        &::before {
+          background-image: url(../assets/envelope-blue.svg);
+        }
+
+        &::after {
+          background-image: url(../assets/envelope-blue-corner.svg);
+        }
+      }
+
+      & > * {
+        position: relative;
+        z-index: 10;
+      }
+
+      &.active {
+        z-index: 200;
+
+        &::after {
+          transform: translateY(-99%);
+        }
+      }
+
+      &-info {
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 24px;
+        max-height: 0;
+        width: calc(100% - 28px);
+        aspect-ratio: 360 / 550;
+        box-sizing: border-box;
+        overflow: hidden;
+
+        transition: max-height ease-in-out 0.2s;
+
+        &::before {
+          content: '';
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 100;
+          visibility: hidden;
+          pointer-events: none;
+        }
+
+        &-wrapper {
+          position: relative;
+          z-index: 101;
+          width: 100%;
+          height: 100%;
+          background: url(../assets/marble-bg-min.webp) center repeat;
+          background-size: 600px;
+        }
+      }
+
+      &.active &-info {
+        max-height: 1200px;
+
+        &::before {
+          visibility: visible;
+          pointer-events: all;
+        }
       }
 
       &-figure {
