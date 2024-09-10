@@ -42,14 +42,12 @@
 
       @include tablet {
         width: 306px;
-        left: -110px;
-        bottom: -40px;
+        left: -130px;
+        bottom: -20px;
         transform: scale(-1, 1) rotate(-10deg);
       }
 
-      @include mobile {
-        bottom: -120px;
-      }
+
     }
   }
 

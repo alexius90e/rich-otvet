@@ -1,2 +1,122 @@
 .footer {
+  position: relative;
+  z-index: 5;
+
+  & .container {
+    position: relative;
+    background: url(../assets/footer-bg.webp) left 960px bottom / 492px no-repeat;
+
+    @include desktopfhd {
+      background-position: left 800px bottom;
+      background-size: 300px;
+    }
+
+    @include desktop {
+      background-position: left 600px bottom;
+      background-size: 240px;
+    }
+
+    @include laptoplg {
+      background-position: left 560px bottom;
+      background-size: 140px;
+    }
+
+    @include laptop {
+      background: none;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 100px;
+      bottom: 42px;
+      display: block;
+      width: 724px;
+      aspect-ratio: 724 / 472;
+      background: url(../assets/footer-dialog.svg) center / cover no-repeat;
+      transform: rotate(-4deg);
+
+      @include desktopfhd {
+        right: 56px;
+        width: 480px;
+      }
+
+      @include desktop {
+        width: 280px
+      }
+
+      @include laptop {
+        right: 20px;
+      }
+
+      @include tablet {
+        bottom: 270px;
+      }
+    }
+  }
+
+  &__content {
+    max-width: 670px;
+    padding: 155px 0 34px;
+
+    @include desktop {
+      max-width: 480px;
+      padding: 20px 0 16px;
+    }
+
+    @include tablet {
+      max-width: 298px;
+      padding: 20px 0 32px;
+    }
+  }
+
+  &__logo {
+    &-image {
+      display: block;
+      max-width: 100%;
+      height: auto;
+
+      @include desktop {
+        width: 128px;
+      }
+    }
+  }
+
+  &__copyright {
+    font-family: "Montserrat", sans-serif;
+    margin: 54px 0 85px;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+
+    @include desktop {
+      margin: 31px 0 58px;
+      font-size: 12px;
+    }
+
+    @include tablet {
+      margin: 31px 0 47px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px 24px;
+
+    &-link {
+      font-family: "Montserrat", sans-serif;
+      flex: 0 0 auto;
+      font-weight: 400;
+      font-size: 14px;
+      color: #000;
+
+      @include desktop {
+        font-size: 12px;
+      }
+    }
+  }
 }
