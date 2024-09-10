@@ -476,19 +476,6 @@ img {
   }
 }
 
-.rich-video {
-  margin: 0 0 160px;
-}
-@media (max-width: 1080px) {
-  .rich-video {
-    margin: 0 0 41px;
-  }
-}
-@media (max-width: 576px) {
-  .rich-video {
-    margin: 0 0 35px;
-  }
-}
 @media (max-width: 768px) {
   .rich-video .container {
     padding: 0;
@@ -555,4 +542,284 @@ img {
   height: 12.2%;
   border-radius: 0 0 40px 40px;
   box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
+}
+
+.exercise {
+  padding: 160px 0 0;
+}
+@media (max-width: 1080px) {
+  .exercise {
+    padding: 41px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .exercise {
+    padding: 35px 0 0;
+  }
+}
+.exercise__tag {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto 90px;
+  padding: 11px 41px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: lowercase;
+  color: #d8a84d;
+  border: 2px solid #c2a36d;
+  border-radius: 40px;
+}
+@media (max-width: 1080px) {
+  .exercise__tag {
+    margin: 0 auto 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .exercise__tag {
+    margin: 0 0 36px;
+  }
+}
+.exercise__title {
+  font-family: "Merriweather", sans-serif;
+  margin: 0 0 50px;
+  font-weight: 700;
+  font-size: 84px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 1080px) {
+  .exercise__title {
+    margin: 0 0 24px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .exercise__title {
+    margin: 0 0 14px;
+    text-align: left;
+  }
+}
+.exercise__description {
+  max-width: 1540px;
+  margin: 0 auto 90px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 1080px) {
+  .exercise__description {
+    margin: 0 auto 40px;
+    font-size: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .exercise__description {
+    margin: 0 auto 36px;
+    text-align: left;
+  }
+}
+.exercise__steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin: 0 0 90px;
+}
+@media (max-width: 1920px) {
+  .exercise__steps {
+    gap: 32px;
+  }
+}
+@media (max-width: 1080px) {
+  .exercise__steps {
+    margin: 0 0 36px;
+  }
+}
+@media (max-width: 992px) {
+  .exercise__steps {
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .exercise__steps {
+    margin: 0 0 30px;
+  }
+}
+.exercise__steps-card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 calc(33.3333333333% - 53.3333333333px);
+  aspect-ratio: 1.0167/1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (max-width: 1920px) {
+  .exercise__steps-card {
+    flex: 0 0 calc(33.3333333333% - 21.3333333333px);
+  }
+}
+@media (max-width: 992px) {
+  .exercise__steps-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .exercise__steps-card {
+    flex: 0 0 100%;
+    max-width: 420px;
+  }
+}
+.exercise__steps-card:nth-child(5n+1) {
+  background-image: url(../assets/envelope-green.svg);
+}
+.exercise__steps-card:nth-child(5n+2) {
+  background-image: url(../assets/envelope-yellow.svg);
+}
+.exercise__steps-card:nth-child(5n+3) {
+  background-image: url(../assets/envelope-brown.svg);
+}
+.exercise__steps-card:nth-child(5n+4) {
+  background-image: url(../assets/envelope-white.svg);
+}
+.exercise__steps-card:nth-child(5n+5) {
+  background-image: url(../assets/envelope-blue.svg);
+}
+.exercise__steps-card-figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12% auto 0;
+  width: 36%;
+}
+.exercise__steps-card-figure-image {
+  filter: brightness(100);
+}
+.exercise__steps-card:nth-child(5n+4) .exercise__steps-card-figure-image {
+  filter: brightness(1);
+}
+.exercise__steps-card-number {
+  margin-top: 5%;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 1920px) {
+  .exercise__steps-card-number {
+    font-size: 36px;
+  }
+}
+@media (max-width: 1440px) {
+  .exercise__steps-card-number {
+    font-size: 28px;
+  }
+}
+@media (max-width: 1080px) {
+  .exercise__steps-card-number {
+    font-size: 24px;
+  }
+}
+.exercise__steps-card:nth-child(5n+4) .exercise__steps-card-number {
+  color: #0e3060;
+}
+.exercise__steps-card-controls {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex: 1 1 auto;
+  padding-bottom: 8%;
+}
+.exercise__steps-card-controls-button {
+  padding: 30px 78px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #fdfdfd;
+  border: 2px solid #fdfdfd;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0);
+  transition-property: background-color, border-color, color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 1920px) {
+  .exercise__steps-card-controls-button {
+    padding: 24px 56px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .exercise__steps-card-controls-button {
+    padding: 16px 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1080px) {
+  .exercise__steps-card-controls-button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}
+.exercise__steps-card-controls-button:hover {
+  background: white;
+  color: #0e3060;
+}
+.exercise__steps-card-controls-button:active {
+  transform: scale(0.98);
+}
+.exercise__steps-card:nth-child(5n+4) .exercise__steps-card-controls-button {
+  color: #0e3060;
+  border-color: #0e3060;
+}
+.exercise__steps-card:nth-child(5n+4) .exercise__steps-card-controls-button:hover {
+  background: #0e3060;
+  border-color: #0e3060;
+  color: #ffffff;
+}
+.exercise__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .exercise__controls {
+    justify-content: flex-start;
+  }
+}
+.exercise__controls-button {
+  display: inline-block;
+  padding: 30px 82px;
+  font-family: "Merriweather", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #c3a266;
+  border: 2px solid #c3a266;
+  border-radius: 6px;
+  background-color: #ffffff;
+  transition-property: background-color, border-color, color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 1080px) {
+  .exercise__controls-button {
+    padding: 14px 36px;
+    font-size: 14px;
+  }
+}
+.exercise__controls-button:hover {
+  background-color: #c3a266;
+  color: #ffffff;
+}
+.exercise__controls-button:active {
+  transform: scale(0.98);
 }

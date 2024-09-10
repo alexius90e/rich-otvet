@@ -1,0 +1,280 @@
+.exercise {
+  padding: 160px 0 0;
+
+  @include laptoplg {
+    padding: 41px 0 0;
+  }
+
+  @include tablet {
+    padding: 35px 0 0;
+  }
+
+  &__tag {
+    width: fit-content;
+    margin: 0 auto 90px;
+    padding: 11px 41px;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-transform: lowercase;
+    color: #d8a84d;
+    border: 2px solid #c2a36d;
+    border-radius: 40px;
+
+    @include laptoplg {
+      margin: 0 auto 40px;
+      font-size: 14px;
+    }
+
+    @include tablet {
+      margin: 0 0 36px;
+    }
+  }
+
+  &__title {
+    font-family: 'Merriweather', sans-serif;
+    margin: 0 0 50px;
+    font-weight: 700;
+    font-size: 84px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #000;
+
+    @include laptoplg {
+      margin: 0 0 24px;
+      font-size: 36px;
+    }
+
+    @include tablet {
+      margin: 0 0 14px;
+      text-align: left;
+    }
+  }
+
+  &__description {
+    max-width: 1540px;
+    margin: 0 auto 90px;
+    font-family: 'Merriweather', sans-serif;
+    font-weight: 700;
+    font-size: 48px;
+    text-align: center;
+    color: #000;
+
+    @include laptoplg {
+      margin: 0 auto 40px;
+      font-size: 24px;
+    }
+
+    @include tablet {
+      margin: 0 auto 36px;
+      text-align: left;
+    }
+  }
+
+  &__steps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 80px;
+    margin: 0 0 90px;
+
+    @include desktopfhd {
+      gap: 32px;
+    }
+
+    @include laptoplg {
+      margin: 0 0 36px;
+    }
+
+    @include laptop {
+      gap: 24px;
+    }
+
+    @include tablet {
+      margin: 0 0 30px;
+    }
+
+    &-card {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(100% / 3 - 80px / 3 * 2);
+      aspect-ratio: 1.0167 / 1;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      @include desktopfhd {
+        flex: 0 0 calc(100% / 3 - 32px / 3 * 2);
+      }
+
+      @include laptop {
+        flex: 0 0 calc(100% / 2 - 24px / 2);
+      }
+
+      @include mobile {
+        flex: 0 0 100%;
+        max-width: 420px;
+      }
+
+      &:nth-child(5n + 1) {
+        background-image: url(../assets/envelope-green.svg);
+      }
+
+      &:nth-child(5n + 2) {
+        background-image: url(../assets/envelope-yellow.svg);
+      }
+
+      &:nth-child(5n + 3) {
+        background-image: url(../assets/envelope-brown.svg);
+      }
+
+      &:nth-child(5n + 4) {
+        background-image: url(../assets/envelope-white.svg);
+      }
+
+      &:nth-child(5n + 5) {
+        background-image: url(../assets/envelope-blue.svg);
+      }
+
+      &-figure {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 12% auto 0;
+        width: 36%;
+
+        &-image {
+          filter: brightness(100);
+        }
+      }
+
+      &:nth-child(5n + 4) &-figure-image {
+        filter: brightness(1);
+      }
+
+      &-number {
+        margin-top: 5%;
+        font-family: 'Merriweather', sans-serif;
+        font-weight: 400;
+        font-size: 48px;
+        color: #fff;
+        text-align: center;
+
+        @include desktopfhd {
+          font-size: 36px;
+        }
+
+        @include desktop {
+          font-size: 28px;
+        }
+
+        @include laptoplg {
+          font-size: 24px;
+        }
+      }
+
+      &:nth-child(5n + 4) &-number {
+        color: #0e3060;
+      }
+
+      &-controls {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 1 1 auto;
+        padding-bottom: 8%;
+
+        &-button {
+          padding: 30px 78px;
+          font-family: 'Merriweather', sans-serif;
+          font-weight: 400;
+          font-size: 20px;
+          color: #fdfdfd;
+          border: 2px solid #fdfdfd;
+          border-radius: 6px;
+          background: rgba($color: #ffffff, $alpha: 0);
+          transition-property: background-color, border-color, color, transform;
+          transition-timing-function: ease-in-out;
+          transition-duration: 0.1s;
+          cursor: pointer;
+
+          @include desktopfhd {
+            padding: 24px 56px;
+            font-size: 16px;
+          }
+
+          @include desktop {
+            padding: 16px 40px;
+            font-size: 14px;
+          }
+
+          @include laptoplg {
+            padding: 12px 30px;
+            font-size: 12px;
+          }
+
+          &:hover {
+            background: rgba($color: #ffffff, $alpha: 1);
+            color: #0e3060;
+          }
+
+          &:active {
+            transform: scale(0.98);
+          }
+        }
+      }
+
+      &:nth-child(5n + 4) &-controls-button {
+        color: #0e3060;
+        border-color: #0e3060;
+
+        &:hover {
+          background: rgba($color: #0e3060, $alpha: 1);
+          border-color: #0e3060;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablet {
+      justify-content: flex-start;
+    }
+
+    &-button {
+      display: inline-block;
+      padding: 30px 82px;
+      font-family: 'Merriweather', sans-serif;
+      font-weight: 400;
+      font-size: 20px;
+      text-transform: uppercase;
+      color: #c3a266;
+      border: 2px solid #c3a266;
+      border-radius: 6px;
+      background-color: #ffffff;
+      transition-property: background-color, border-color, color, transform;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.1s;
+      cursor: pointer;
+
+      @include laptoplg {
+        padding: 14px 36px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        background-color: #c3a266;
+        color: #ffffff;
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+  }
+}

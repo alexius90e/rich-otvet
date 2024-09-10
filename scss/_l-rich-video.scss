@@ -1,13 +1,5 @@
 .rich-video {
-  margin: 0 0 160px;
 
-  @include laptoplg {
-    margin: 0 0 41px;
-  }
-
-  @include mobile {
-    margin: 0 0 35px;
-  }
 
   & .container {
     @include tablet {
