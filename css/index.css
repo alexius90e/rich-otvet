@@ -59,7 +59,7 @@ img {
   z-index: 100;
   min-height: 480px;
   overflow: hidden;
-  background: url(../assets/header-bg.png) center bottom no-repeat;
+  background: url(../assets/header-bg.webp) center bottom no-repeat;
 }
 @media (max-width: 1920px) {
   .header {
@@ -447,7 +447,7 @@ img {
   display: block;
   width: 1015px;
   height: 1007px;
-  background: url(../assets/cherry.png) center no-repeat;
+  background: url(../assets/cherry.webp) center no-repeat;
   background-size: cover;
 }
 @media (max-width: 1440px) {
@@ -700,7 +700,7 @@ img {
   display: block;
   width: 1000px;
   aspect-ratio: 1/1;
-  background: url(../assets/cherry.png) center/cover no-repeat;
+  background: url(../assets/cherry.webp) center/cover no-repeat;
   transform: rotate(45deg);
 }
 @media (max-width: 1920px) {
@@ -746,7 +746,7 @@ img {
   display: block;
   width: 1000px;
   aspect-ratio: 1/1;
-  background: url(../assets/cherry.png) center/cover no-repeat;
+  background: url(../assets/cherry.webp) center/cover no-repeat;
   transform: rotate(45deg);
 }
 @media (max-width: 1920px) {
@@ -1686,7 +1686,7 @@ img {
 .about {
   padding: 154px 0;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
   .about {
     padding: 80px 0;
   }
@@ -1717,6 +1717,12 @@ img {
     left: auto;
     right: -200px;
     width: 560px;
+  }
+}
+@media (max-width: 1440px) {
+  .about .container::before {
+    right: -200px;
+    width: 400px;
   }
 }
 @media (max-width: 1080px) {
@@ -1758,6 +1764,7 @@ img {
 @media (max-width: 768px) {
   .about__title {
     font-size: 36px;
+    text-align: left;
   }
 }
 .about__content {
@@ -1810,7 +1817,7 @@ img {
   z-index: 5;
   padding: 225px 0 0;
 }
-@media (max-width: 1080px) {
+@media (max-width: 1440px) {
   .self-develop {
     padding: 50px 0 0;
   }
@@ -1858,26 +1865,15 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   gap: 80px;
-  margin: 0 0 90px;
 }
 @media (max-width: 1920px) {
   .self-develop__steps {
     gap: 32px;
   }
 }
-@media (max-width: 1080px) {
-  .self-develop__steps {
-    margin: 0 0 36px;
-  }
-}
 @media (max-width: 992px) {
   .self-develop__steps {
     gap: 24px;
-  }
-}
-@media (max-width: 768px) {
-  .self-develop__steps {
-    margin: 0 0 30px;
   }
 }
 .self-develop__steps-card {
@@ -2231,4 +2227,128 @@ img {
   background: white;
   border-color: #ffffff;
   color: #cc9e46;
+}
+
+.your-way {
+  padding-top: 249px;
+}
+@media (max-width: 1440px) {
+  .your-way {
+    padding-top: 72px;
+  }
+}
+@media (max-width: 768px) {
+  .your-way {
+    padding-top: 124px;
+  }
+}
+.your-way .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media (max-width: 768px) {
+  .your-way .container {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 768px) {
+  .your-way__figure {
+    flex: 1 1 100%;
+    min-width: 695px;
+    margin: 0 calc((100% - 695px) / 2);
+  }
+}
+.your-way__figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.your-way__content {
+  flex: 0 0 729px;
+  padding-top: 32px;
+}
+@media (max-width: 1920px) {
+  .your-way__content {
+    flex: 0 0 560px;
+  }
+}
+@media (max-width: 1440px) {
+  .your-way__content {
+    flex: 0 0 420px;
+    padding: 0;
+  }
+}
+@media (max-width: 1080px) {
+  .your-way__content {
+    flex: 0 0 290px;
+  }
+}
+@media (max-width: 768px) {
+  .your-way__content {
+    flex: 1 1 100%;
+  }
+}
+.your-way__title {
+  margin: 0 0 91px;
+  font-weight: 700;
+  font-size: 84px;
+  text-transform: uppercase;
+  color: #000;
+}
+@media (max-width: 1920px) {
+  .your-way__title {
+    margin: 0 0 36px;
+    font-size: 64px;
+  }
+}
+@media (max-width: 1440px) {
+  .your-way__title {
+    font-size: 48px;
+  }
+}
+@media (max-width: 1080px) {
+  .your-way__title {
+    font-size: 36px;
+    line-height: 140%;
+  }
+}
+@media (max-width: 768px) {
+  .your-way__title {
+    max-width: calc(100% - 100px);
+    margin: 0 0 30px;
+  }
+}
+.your-way__title span {
+  color: #c0a162;
+}
+.your-way__text {
+  margin: 51px 0 0;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 129%;
+  color: #000;
+}
+@media (max-width: 1920px) {
+  .your-way__text {
+    margin: 20px 0 0;
+    font-size: 22px;
+  }
+}
+@media (max-width: 1440px) {
+  .your-way__text {
+    font-size: 17px;
+  }
+}
+@media (max-width: 1080px) {
+  .your-way__text {
+    font-size: 14px;
+    line-height: 143%;
+  }
+}
+@media (max-width: 768px) {
+  .your-way__text {
+    margin: 14px 0 0;
+    font-size: 12px;
+  }
 }

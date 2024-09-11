@@ -3,7 +3,7 @@
   z-index: 5;
   padding: 225px 0 0;
 
-  @include laptoplg {
+  @include desktop {
     padding: 50px 0 0;
   }
 
@@ -47,22 +47,13 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 80px;
-    margin: 0 0 90px;
 
     @include desktopfhd {
       gap: 32px;
     }
 
-    @include laptoplg {
-      margin: 0 0 36px;
-    }
-
     @include laptop {
       gap: 24px;
-    }
-
-    @include tablet {
-      margin: 0 0 30px;
     }
 
     &-card {

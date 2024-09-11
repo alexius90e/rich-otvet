@@ -1,7 +1,7 @@
 .about {
   padding: 154px 0;
 
-  @include laptoplg {
+  @include desktop {
     padding: 80px 0;
   }
 
@@ -29,6 +29,11 @@
         left: auto;
         right: -200px;
         width: 560px;
+      }
+
+      @include desktop {
+        right: -200px;
+        width: 400px;
       }
 
       @include laptoplg {
@@ -66,6 +71,7 @@
 
     @include tablet {
       font-size: 36px;
+      text-align: left;
     }
   }
 
