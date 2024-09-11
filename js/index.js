@@ -14,8 +14,9 @@ exerciseStepsCards.forEach((card) => {
   card.addEventListener('click', (event) => {
     const isOpenButton = event.target.classList.contains('exercise__steps-card-controls-button');
     const isInfo = event.target.classList.contains('exercise__steps-card-info');
+    const isClose = event.target.classList.contains('exercise__steps-card-info-close');
 
     if (isOpenButton) event.currentTarget.classList.add('active')
-    if (isInfo) event.currentTarget.classList.remove('active')
+    if (isInfo || isClose) event.currentTarget.classList.remove('active')
   });
 });

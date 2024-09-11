@@ -237,6 +237,7 @@
         background-repeat: no-repeat;
         background-size: cover;
         transition: transform ease-in-out 0.1s;
+        will-change: transform;
         pointer-events: none;
       }
 
@@ -323,8 +324,8 @@
         aspect-ratio: 360 / 550;
         box-sizing: border-box;
         overflow: hidden;
-
-        transition: max-height ease-in-out 0.2s;
+        transition: max-height ease-in-out 0.1s;
+        will-change: max-height;
 
         &::before {
           content: '';
@@ -343,8 +344,114 @@
           z-index: 101;
           width: 100%;
           height: 100%;
+          padding: 160px 48px 48px;
+          box-sizing: border-box;
           background: url(../assets/marble-bg-min.webp) center repeat;
           background-size: 600px;
+
+          @include desktopfhd {
+            padding: 100px 32px 32px;
+          }
+
+          @include desktop {
+            padding: 80px 32px 32px;
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 48px;
+            left: 50%;
+            width: 60%;
+            aspect-ratio: 1000 / 132;
+            background: url(../assets/logo.svg) center / cover no-repeat;
+            transform: translateX(-50%);
+
+            @include desktopfhd {
+              top: 24px;
+            }
+          }
+        }
+
+        &-close {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36px;
+          height: 36px;
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 120%;
+          color: #06223e;
+
+          @include desktopfhd {
+            width: 24px;
+            height: 24px;
+            font-size: 18px;
+          }
+        }
+
+        &-answer {
+          max-height: 100%;
+          overflow-y: auto;
+
+          &::-webkit-scrollbar {
+            width: 6px;
+          }
+
+          &::-webkit-scrollbar-track {
+            background: #f9f9f9;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background: #dddddd;
+          }
+        }
+
+        &-id {
+          font-weight: 700;
+          font-size: 48px;
+          text-transform: uppercase;
+          color: #cc9e46;
+
+          @include desktopfhd {
+            font-size: 24px;
+          }
+        }
+
+        &-title {
+          margin: 0 0 48px;
+          font-weight: 400;
+          font-size: 48px;
+          text-transform: uppercase;
+          color: #cc9e46;
+
+          @include desktopfhd {
+            margin: 0 0 24px;
+            font-size: 24px;
+          }
+        }
+
+        &-text {
+          margin: 0 0 24px;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 150%;
+          color: #000;
+
+          @include desktopfhd {
+            margin: 0 0 12px;
+            font-size: 12px;
+          }
+        }
+
+        &-figure {
+          display: flex;
+          justify-content: flex-end;
         }
       }
 
