@@ -1359,7 +1359,6 @@ img {
   width: 100%;
   padding: 160px 0;
   margin: 0 auto 90px;
-  aspect-ratio: 1.773388/1;
   box-sizing: border-box;
   background: url(../assets/logo.svg) bottom 64px center/492px no-repeat, url(../assets/marble-bg-min.webp) center repeat;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.25);
@@ -1593,16 +1592,23 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  min-height: 642px;
   padding: 0 200px;
 }
 @media (max-width: 1920px) {
   .conclusions__slide {
+    min-height: 454px;
     padding: 0 160px;
+  }
+}
+@media (max-width: 1440px) {
+  .conclusions__slide {
+    min-height: 390px;
   }
 }
 @media (max-width: 1080px) {
   .conclusions__slide {
+    min-height: 228px;
     padding: 0 110px;
   }
 }

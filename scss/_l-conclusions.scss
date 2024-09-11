@@ -46,8 +46,6 @@
         bottom: -20px;
         transform: scale(-1, 1) rotate(-10deg);
       }
-
-
     }
   }
 
@@ -78,7 +76,6 @@
     width: 100%;
     padding: 160px 0;
     margin: 0 auto 90px;
-    aspect-ratio: 1.773388 / 1;
     box-sizing: border-box;
     background: url(../assets/logo.svg) bottom 64px center / 492px no-repeat,
       url(../assets/marble-bg-min.webp) center repeat;
@@ -307,14 +304,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100%;
+    min-height: 642px;
     padding: 0 200px;
 
     @include desktopfhd {
+      min-height: 454px;
       padding: 0 160px;
     }
 
+    @include desktop {
+      min-height: 390px;
+    }
+
     @include laptoplg {
+      min-height: 228px;
       padding: 0 110px;
     }
 
