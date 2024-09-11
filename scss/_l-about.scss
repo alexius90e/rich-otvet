@@ -1,6 +1,5 @@
 .about {
   padding: 154px 0;
-  padding-bottom: 800px;
 
   @include laptoplg {
     padding: 80px 0;
@@ -29,12 +28,7 @@
         top: 100%;
         left: auto;
         right: -200px;
-        width: 420px;
-      }
-
-      @include desktop {
-        right: -160px;
-        width: 320px;
+        width: 560px;
       }
 
       @include laptoplg {
@@ -43,11 +37,11 @@
       }
 
       @include laptop {
-
+        right: -160px;
       }
 
       @include tablet {
-
+        right: -140px;
       }
     }
   }

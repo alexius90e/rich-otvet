@@ -8,13 +8,26 @@ const swiper = new Swiper('.conclusions .swiper', {
   },
 });
 
-const exerciseStepsCards = document.querySelectorAll('.exercise__steps-card');
+const exerciseCards = document.querySelectorAll('.exercise__steps-card');
 
-exerciseStepsCards.forEach((card) => {
+exerciseCards.forEach((card) => {
   card.addEventListener('click', (event) => {
     const isOpenButton = event.target.classList.contains('exercise__steps-card-controls-button');
     const isInfo = event.target.classList.contains('exercise__steps-card-info');
     const isClose = event.target.classList.contains('exercise__steps-card-info-close');
+
+    if (isOpenButton) event.currentTarget.classList.add('active')
+    if (isInfo || isClose) event.currentTarget.classList.remove('active')
+  });
+});
+
+const selfDevelopCards = document.querySelectorAll('.self-develop__steps-card');
+
+selfDevelopCards.forEach((card) => {
+  card.addEventListener('click', (event) => {
+    const isOpenButton = event.target.classList.contains('self-develop__steps-card-controls-button');
+    const isInfo = event.target.classList.contains('self-develop__steps-card-info');
+    const isClose = event.target.classList.contains('self-develop__steps-card-info-close');
 
     if (isOpenButton) event.currentTarget.classList.add('active')
     if (isInfo || isClose) event.currentTarget.classList.remove('active')

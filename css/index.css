@@ -807,7 +807,6 @@ img {
   }
 }
 .exercise__title {
-  font-family: "Merriweather", sans-serif;
   margin: 0 0 50px;
   font-weight: 700;
   font-size: 84px;
@@ -1686,7 +1685,6 @@ img {
 
 .about {
   padding: 154px 0;
-  padding-bottom: 800px;
 }
 @media (max-width: 1080px) {
   .about {
@@ -1718,19 +1716,23 @@ img {
     top: 100%;
     left: auto;
     right: -200px;
-    width: 420px;
-  }
-}
-@media (max-width: 1440px) {
-  .about .container::before {
-    right: -160px;
-    width: 320px;
+    width: 560px;
   }
 }
 @media (max-width: 1080px) {
   .about .container::before {
     right: -102px;
     width: 264px;
+  }
+}
+@media (max-width: 992px) {
+  .about .container::before {
+    right: -160px;
+  }
+}
+@media (max-width: 768px) {
+  .about .container::before {
+    right: -140px;
   }
 }
 .about__title {
@@ -1801,4 +1803,432 @@ img {
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
+}
+
+.self-develop {
+  position: relative;
+  z-index: 5;
+  padding: 225px 0 0;
+}
+@media (max-width: 1080px) {
+  .self-develop {
+    padding: 50px 0 0;
+  }
+}
+@media (max-width: 768px) {
+  .self-develop {
+    padding: 34px 0 0;
+  }
+}
+.self-develop__title {
+  max-width: 1544px;
+  margin: 0 auto 50px;
+  font-weight: 700;
+  font-size: 84px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+@media (max-width: 1080px) {
+  .self-develop__title {
+    max-width: 704px;
+    margin: 0 auto 24px;
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  .self-develop__title {
+    max-width: 520px;
+    margin: 0 0 14px;
+    text-align: left;
+  }
+}
+@media (max-width: 576px) {
+  .self-develop__title {
+    max-width: 294px;
+    margin: 0 0 14px;
+    font-size: 24px;
+    text-align: left;
+  }
+}
+.self-develop__steps {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 80px;
+  margin: 0 0 90px;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps {
+    gap: 32px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-develop__steps {
+    margin: 0 0 36px;
+  }
+}
+@media (max-width: 992px) {
+  .self-develop__steps {
+    gap: 24px;
+  }
+}
+@media (max-width: 768px) {
+  .self-develop__steps {
+    margin: 0 0 30px;
+  }
+}
+.self-develop__steps-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 calc(33.3333333333% - 53.3333333333px);
+  aspect-ratio: 730/718;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card {
+    flex: 0 0 calc(33.3333333333% - 21.3333333333px);
+  }
+}
+@media (max-width: 992px) {
+  .self-develop__steps-card {
+    flex: 0 0 calc(50% - 12px);
+  }
+}
+@media (max-width: 576px) {
+  .self-develop__steps-card {
+    flex: 0 0 100%;
+    max-width: 420px;
+  }
+}
+.self-develop__steps-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.self-develop__steps-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 730/460;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform ease-in-out 0.1s;
+  will-change: transform;
+  pointer-events: none;
+}
+.self-develop__steps-card:nth-child(3n+1) {
+  z-index: 1;
+}
+.self-develop__steps-card:nth-child(3n+1)::before {
+  background-image: url(../assets/envelope-green.svg);
+}
+.self-develop__steps-card:nth-child(3n+1)::after {
+  background-image: url(../assets/envelope-green-corner.svg);
+}
+.self-develop__steps-card:nth-child(3n+2) {
+  z-index: 2;
+}
+.self-develop__steps-card:nth-child(3n+2)::before {
+  background-image: url(../assets/envelope-blue.svg);
+}
+.self-develop__steps-card:nth-child(3n+2)::after {
+  background-image: url(../assets/envelope-blue-corner.svg);
+}
+.self-develop__steps-card:nth-child(3n+3) {
+  z-index: 3;
+}
+.self-develop__steps-card:nth-child(3n+3)::before {
+  background-image: url(../assets/envelope-yellow.svg);
+}
+.self-develop__steps-card:nth-child(3n+3)::after {
+  background-image: url(../assets/envelope-yellow-corner.svg);
+}
+.self-develop__steps-card > * {
+  position: relative;
+  z-index: 10;
+}
+.self-develop__steps-card.active {
+  z-index: 200;
+}
+.self-develop__steps-card.active::after {
+  transform: translateY(-99%);
+}
+.self-develop__steps-card-info {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 36%;
+  max-height: 0;
+  width: calc(100% - 28px);
+  aspect-ratio: 360/420;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: max-height ease-in-out 0.1s;
+  will-change: max-height;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-info {
+    bottom: 40%;
+  }
+}
+@media (max-width: 992px) {
+  .self-develop__steps-card-info {
+    bottom: 34%;
+  }
+}
+@media (max-width: 576px) {
+  .self-develop__steps-card-info {
+    bottom: 120px;
+  }
+}
+.self-develop__steps-card-info::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  visibility: hidden;
+  pointer-events: none;
+}
+.self-develop__steps-card-info-wrapper {
+  position: relative;
+  z-index: 101;
+  width: 100%;
+  height: 100%;
+  padding: 160px 48px 32px;
+  box-sizing: border-box;
+  background: url(../assets/marble-bg-min.webp) center repeat;
+  background-size: 600px;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-info-wrapper {
+    padding: 100px 32px 24px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-develop__steps-card-info-wrapper {
+    padding: 80px 32px 24px;
+  }
+}
+.self-develop__steps-card-info-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: 10%;
+  background: url(../assets/answer-text.svg) center no-repeat;
+  background-size: auto 100%;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-info-wrapper::before {
+    top: 24px;
+  }
+}
+.self-develop__steps-card-info-close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  color: #06223e;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-info-close {
+    width: 24px;
+    height: 24px;
+    font-size: 18px;
+  }
+}
+.self-develop__steps-card-info-answer {
+  max-height: 100%;
+  overflow-y: auto;
+}
+.self-develop__steps-card-info-answer::-webkit-scrollbar {
+  width: 6px;
+}
+.self-develop__steps-card-info-answer::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+.self-develop__steps-card-info-answer::-webkit-scrollbar-thumb {
+  background: #dddddd;
+}
+.self-develop__steps-card-info-figure {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+  margin: 0 0 4px;
+}
+.self-develop__steps-card-info-figure-image {
+  max-width: 100%;
+  width: 420px;
+  height: auto;
+}
+.self-develop__steps-card-info-text {
+  margin: 0 0 60px;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 150%;
+  color: #000;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-info-text {
+    margin: 0 0 40px;
+    font-size: 18px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-develop__steps-card-info-text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-develop__steps-card-info-text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .self-develop__steps-card-info-text {
+    font-size: 12px;
+  }
+}
+.self-develop__steps-card-info-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.self-develop__steps-card-info-controls-link {
+  display: inline-block;
+  padding: 10px 24px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #d8a84d;
+  border: 2px solid #c2a36d;
+  border-radius: 6px;
+}
+.self-develop__steps-card.active .self-develop__steps-card-info {
+  max-height: 1200px;
+}
+.self-develop__steps-card.active .self-develop__steps-card-info::before {
+  visibility: visible;
+  pointer-events: all;
+}
+.self-develop__steps-card-figure {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex: 1 1 auto;
+  margin: 12% auto 0;
+  width: 62%;
+}
+.self-develop__steps-card-figure-image {
+  margin-left: 10%;
+}
+.self-develop__steps-card-number {
+  margin-bottom: 4%;
+  font-weight: 400;
+  font-size: 32px;
+  color: #fff;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .self-develop__steps-card-number {
+    font-size: 24px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-develop__steps-card-number {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .self-develop__steps-card-number {
+    font-size: 24px;
+  }
+}
+.self-develop__steps-card-controls {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 6.5%;
+}
+.active .self-develop__steps-card-controls {
+  background: url(../assets/rich-wh.svg) center no-repeat;
+  background-size: auto 100%;
+}
+.self-develop__steps-card-controls-button {
+  padding: 28px 78px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #cc9e46;
+  border: 2px solid #cc9e46;
+  border-radius: 6px;
+  background: rgba(204, 158, 70, 0);
+  transition-property: background-color, border-color, color, transform;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.1s;
+  cursor: pointer;
+}
+@media (max-width: 1920px) {
+  .self-develop__steps-card-controls-button {
+    padding: 24px 56px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 1440px) {
+  .self-develop__steps-card-controls-button {
+    padding: 16px 40px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 1080px) {
+  .self-develop__steps-card-controls-button {
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+}
+.self-develop__steps-card-controls-button:hover {
+  background: #cc9e46;
+  color: #ffffff;
+}
+.self-develop__steps-card-controls-button:active {
+  transform: scale(0.98);
+}
+.active .self-develop__steps-card-controls-button {
+  opacity: 0;
+}
+.self-develop__steps-card:nth-child(3n+3) .self-develop__steps-card-controls-button {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.self-develop__steps-card:nth-child(3n+3) .self-develop__steps-card-controls-button:hover {
+  background: white;
+  border-color: #ffffff;
+  color: #cc9e46;
 }
