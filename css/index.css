@@ -1076,7 +1076,7 @@ img {
   overflow-y: auto;
 }
 .exercise__steps-card-info-answer::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 .exercise__steps-card-info-answer::-webkit-scrollbar-track {
   background: #f9f9f9;
@@ -1108,6 +1108,11 @@ img {
     font-size: 24px;
   }
 }
+@media (max-width: 1440px) {
+  .exercise__steps-card-info-title {
+    font-size: 20px;
+  }
+}
 .exercise__steps-card-info-text {
   margin: 0 0 24px;
   font-weight: 400;
@@ -1124,6 +1129,12 @@ img {
 .exercise__steps-card-info-figure {
   display: flex;
   justify-content: flex-end;
+}
+.exercise__steps-card-info-figure-image {
+  display: block;
+  max-width: 100%;
+  width: 50%;
+  height: auto;
 }
 .exercise__steps-card.active .exercise__steps-card-info {
   max-height: 1200px;

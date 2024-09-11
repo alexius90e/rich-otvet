@@ -399,7 +399,7 @@
           overflow-y: auto;
 
           &::-webkit-scrollbar {
-            width: 6px;
+            width: 4px;
           }
 
           &::-webkit-scrollbar-track {
@@ -433,6 +433,10 @@
             margin: 0 0 24px;
             font-size: 24px;
           }
+
+          @include desktop {
+            font-size: 20px;
+          }
         }
 
         &-text {
@@ -451,6 +455,13 @@
         &-figure {
           display: flex;
           justify-content: flex-end;
+
+          &-image {
+            display: block;
+            max-width: 100%;
+            width: 50%;
+            height: auto;
+          }
         }
       }
 
