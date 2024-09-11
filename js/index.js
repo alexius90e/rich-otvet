@@ -16,8 +16,11 @@ exerciseCards.forEach((card) => {
     const isInfo = event.target.classList.contains('exercise__steps-card-info');
     const isClose = event.target.classList.contains('exercise__steps-card-info-close');
 
-    if (isOpenButton) event.currentTarget.classList.add('active')
-    if (isInfo || isClose) event.currentTarget.classList.remove('active')
+    if (isOpenButton) {
+      exerciseCards.forEach((card) => card.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+    if (isInfo || isClose) event.currentTarget.classList.remove('active');
   });
 });
 
@@ -25,11 +28,16 @@ const selfDevelopCards = document.querySelectorAll('.self-develop__steps-card');
 
 selfDevelopCards.forEach((card) => {
   card.addEventListener('click', (event) => {
-    const isOpenButton = event.target.classList.contains('self-develop__steps-card-controls-button');
+    const isOpenButton = event.target.classList.contains(
+      'self-develop__steps-card-controls-button'
+    );
     const isInfo = event.target.classList.contains('self-develop__steps-card-info');
     const isClose = event.target.classList.contains('self-develop__steps-card-info-close');
 
-    if (isOpenButton) event.currentTarget.classList.add('active')
-    if (isInfo || isClose) event.currentTarget.classList.remove('active')
+    if (isOpenButton) {
+      selfDevelopCards.forEach((card) => card.classList.remove('active'));
+      event.currentTarget.classList.add('active');
+    }
+    if (isInfo || isClose) event.currentTarget.classList.remove('active');
   });
 });

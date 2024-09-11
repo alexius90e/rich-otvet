@@ -10,12 +10,44 @@
   }
 
   & .container {
+    position: relative;
     display: flex;
     justify-content: space-between;
     gap: 40px;
 
     @include tablet {
       flex-wrap: wrap;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -420px;
+      bottom: -470px;
+      display: block;
+      width: 880px;
+      aspect-ratio: 880 / 812;
+      background: url(../assets/cherry2.webp) center / cover no-repeat;
+      transform: rotate(-30deg);
+
+      @include desktopfhd {
+        left: -230px;
+        bottom: -390px;
+        width: 560px;
+      }
+
+      @include laptoplg {
+        left: -120px;
+        bottom: -160px;
+        width: 264px;
+      }
+
+      @include tablet {
+        left: auto;
+        right: -120px;
+        bottom: 120px;
+        transform: rotate(30deg) scale(-1, 1);
+      }
     }
   }
 

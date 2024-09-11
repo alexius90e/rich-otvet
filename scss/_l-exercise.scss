@@ -326,18 +326,6 @@
         transition: max-height ease-in-out 0.1s;
         will-change: max-height;
 
-        &::before {
-          content: '';
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          z-index: 100;
-          visibility: hidden;
-          pointer-events: none;
-        }
-
         &-wrapper {
           position: relative;
           z-index: 101;

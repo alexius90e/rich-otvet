@@ -1,0 +1,256 @@
+.callback {
+  padding: 364px 0 164px;
+
+  @include laptoplg {
+    padding: 136px 0 83px;
+  }
+
+  @include tablet {
+    padding: 62px 0 390px;
+  }
+
+  & .container {
+    display: flex;
+    align-items: center;
+    gap: 84px;
+
+    @include desktop {
+      gap: 14px 40px;
+    }
+
+    @include tablet {
+      flex-wrap: wrap;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: none;
+      width: 300px;
+      aspect-ratio: 880 / 812;
+      background: url(../assets/cherry2.webp) center / cover no-repeat;
+      transform: rotate(-7deg) scale(-1, 1);
+
+      @include tablet {
+        display: block;
+        left: -100px;
+        bottom: 360px;
+      }
+    }
+  }
+
+  &__content {
+    flex: 0 0 729px;
+
+    @include desktopfhd {
+      flex: 0 0 560px;
+    }
+
+    @include desktop {
+      flex: 0 0 360px;
+      padding: 0;
+    }
+
+    @include laptoplg {
+      flex: 0 0 290px;
+    }
+
+    @include tablet {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__title {
+    margin: 0 0 63px;
+    font-weight: 700;
+    font-size: 84px;
+    text-transform: uppercase;
+    color: #000;
+
+    @include desktopfhd {
+      margin: 0 0 36px;
+      font-size: 64px;
+    }
+
+    @include desktop {
+      font-size: 48px;
+    }
+
+    @include laptoplg {
+      font-size: 36px;
+    }
+
+    @include tablet {
+      max-width: calc(100% - 100px);
+      margin: 0 0 30px;
+    }
+
+    & span {
+      color: #c0a162;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 129%;
+    color: #000;
+
+    @include desktopfhd {
+      margin: 20px 0 0;
+      font-size: 22px;
+    }
+
+    @include desktop {
+      font-size: 17px;
+    }
+
+    @include laptoplg {
+      font-size: 14px;
+      line-height: 143%;
+    }
+
+    @include tablet {
+      margin: 14px 0 0;
+      font-size: 12px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    gap: 16px;
+    max-width: 1140px;
+
+    &-fieldset {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 0;
+      margin: 0;
+      border: none;
+
+      @include tablet {
+        flex-wrap: wrap;
+      }
+
+      &:last-child {
+        justify-content: space-between;
+
+        @include laptop {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    }
+
+    &-input,
+    &-textarea {
+      display: block;
+      width: 100% !important;
+      padding: 16px 24px;
+      box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+      font-size: 24px;
+      color: #000;
+      border: none;
+      border-bottom: 1px solid #edc5ab;
+      border-left: 1px solid #edc5ab;
+      border-radius: 8px;
+      background-color: #eeeeee;
+
+      @include laptoplg {
+        font-size: 14px;
+      }
+
+      &::placeholder {
+        color: rgba(23, 23, 23, 0.5);
+      }
+    }
+
+    &-textarea {
+      resize: none;
+    }
+
+    &-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &-input {
+        display: inline-block;
+        margin: 0;
+      }
+
+      &-text {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 110%;
+        color: #34383d;
+
+        @include laptoplg {
+          font-size: 12px;
+        }
+
+        & > a {
+          font-family: 'Montserrat', sans-serif;
+          font-weight: 300;
+          font-size: 16px;
+          color: #34383d;
+          text-decoration: underline;
+          text-decoration-skip-ink: none;
+
+          @include laptoplg {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    &-submit {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 42px;
+      box-sizing: border-box;
+      font-weight: 700;
+      font-size: 20px;
+      color: #cca455;
+      border: none;
+      border-bottom: 1px solid #cca455;
+      border-left: 1px solid #cca455;
+      border-radius: 10px;
+      background-color: rgba(204, 163, 85, 0.05);
+      transition-property: background-color;
+      transition-timing-function: ease-in-out;
+      transition-duration: 0.1s;
+      cursor: pointer;
+
+      @include laptoplg {
+        font-size: 16px;
+      }
+
+      @include laptop {
+        justify-content: center;
+        width: 100%;
+      }
+
+      &:hover {
+        background-color: rgba(204, 163, 85, 0.2);
+      }
+
+      &::after {
+        content: '';
+        flex: 0 0 auto;
+        display: block;
+        height: 20px;
+        width: 20px;
+        background: url(../assets/arrow-right.svg) center / cover no-repeat;
+      }
+    }
+  }
+}
