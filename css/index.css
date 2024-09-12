@@ -1172,6 +1172,7 @@ img {
   font-size: 32px;
   line-height: 120%;
   color: #06223e;
+  cursor: pointer;
 }
 @media (max-width: 1920px) {
   .exercise__steps-card-info-close {
@@ -2170,6 +2171,7 @@ img {
   font-size: 32px;
   line-height: 120%;
   color: #06223e;
+  cursor: pointer;
 }
 @media (max-width: 1920px) {
   .self-develop__steps-card-info-close {
