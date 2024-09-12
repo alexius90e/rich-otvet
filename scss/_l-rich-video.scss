@@ -1,9 +1,47 @@
 .rich-video {
-
+  position: relative;
+  z-index: 5;
 
   & .container {
     @include tablet {
       padding: 0;
+    }
+  }
+
+  &_main .container {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -413px;
+      right: -248px;
+      display: block;
+      width: 629px;
+      aspect-ratio: 629 / 826;
+      background: url(../assets/wineglass.webp) center / cover no-repeat;
+      transform: rotate(-7deg);
+
+      @include desktopfhd {
+        width: 520px;
+        top: -360px;
+        right: -200px;
+      }
+
+      @include desktop {
+        width: 420px;
+        top: -240px;
+        right: -130px;
+      }
+
+      @include laptoplg {
+        width: 264px;
+        top: -150px;
+      }
+
+      @include tablet {
+        display: none;
+      }
     }
   }
 
@@ -21,7 +59,6 @@
     aspect-ratio: 1.786525 / 1;
     background: url(../assets/rich-logo.svg) center no-repeat;
     background-color: #06223e;
-    border-radius: 8px;
 
     @include desktopfhd {
       background-size: 44%;
@@ -69,5 +106,9 @@
       border-radius: 0 0 40px 40px;
       box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.45);
     }
+  }
+
+  &_main &__bg {
+    display: none;
   }
 }

@@ -31,6 +31,10 @@
     min-height: 158px;
   }
 
+  &_main {
+    background: none;
+  }
+
   & .container {
     position: relative;
     display: flex;
@@ -54,6 +58,25 @@
       justify-content: space-between;
       gap: 36px;
       padding-top: 24px;
+    }
+  }
+
+  &_main .container {
+    padding-top: 134px;
+
+    @include desktop {
+      padding-top: 45px;
+    }
+
+    @include laptop {
+      justify-content: flex-end;
+    }
+
+    @include tablet {
+      height: 92px;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0;
     }
   }
 
@@ -111,6 +134,34 @@
     }
   }
 
+  &_main &__logo {
+    top: 110px;
+    filter: brightness(100);
+
+    @include desktop {
+      top: 40px;
+    }
+
+    @include laptop {
+      position: absolute;
+      transform: translateX(-50%);
+    }
+
+    @include tablet {
+      position: static;
+      transform: none;
+      filter: brightness(1);
+    }
+
+    &-link {
+      &-image {
+        @include desktop {
+          width: 200px;
+        }
+      }
+    }
+  }
+
   &__nav {
     display: flex;
     gap: 103px;
@@ -125,10 +176,6 @@
 
     @include laptoplg {
       gap: 38px;
-    }
-
-    @include laptop {
-      // display: none;
     }
 
     @include mobile {
@@ -168,6 +215,32 @@
 
       &:hover {
         color: #9b7113;
+      }
+    }
+  }
+
+  &_main &__nav {
+    gap: 134px;
+
+    @include desktopfhd {
+      gap: 70px;
+    }
+
+    @include laptoplg {
+      gap: 8px 38px;
+    }
+
+    &-link {
+      &:first-child {
+        color: #ffffff;
+
+        @include tablet {
+          color: #000;
+        }
+
+        &:hover {
+          color: #9b7113;
+        }
       }
     }
   }

@@ -12,10 +12,10 @@
   </head>
 
   <body>
-    <!-- <header class="header">
+    <header class="header header_main">
       <div class="container">
         <div class="header__logo">
-          <a class="header__logo-link" href="#">
+          <a class="header__logo-link" href="./">
             <img class="header__logo-link-image" src="./assets/logo.svg" alt="logo" />
           </a>
         </div>
@@ -25,12 +25,39 @@
           <a class="header__nav-link" href="#">О проекте</a>
         </nav>
 
-        <div class="header__burger" role="button"></div>
+        <!-- <div class="header__burger" role="button"></div> -->
       </div>
-    </header> -->
+    </header>
 
     <main class="main">
-      <section class="rich-video">
+      <section class="first-screen">
+        <div class="container">
+          <div class="first-screen__content">
+            <figure class="first-screen__content-figure">
+              <img
+                class="first-screen__content-figure-image"
+                src="./assets/footer-dialog.svg"
+                alt="dialog"
+              />
+            </figure>
+            <p class="first-screen__content-text">
+              Бренд соков и напитков Rich® и сервис по работе с психологами Otvet.co объединились,
+              чтобы помочь вам чувствовать Вкус Жизни ярко и в любых обстоятельствах. Для этого мы
+              будем развивать осознанность через внутренний диалог с собой.Именно поэтому с 2023
+              года бренд реализует проект «Вкус Жизни» в соавторстве с психологами, шаг за шагом
+              помогая своим потребителям приблизиться к пониманию себя и наслаждаться жизнью во всех
+              ее проявлениях.
+            </p>
+          </div>
+          <div class="first-screen__envelope"></div>
+        </div>
+
+        <div class="first-screen__juice"></div>
+        <div class="first-screen__cherry"></div>
+        <div class="first-screen__letter"></div>
+      </section>
+
+      <section class="rich-video rich-video_main">
         <div class="container">
           <div class="rich-video__wrapper">
             <div class="rich-video__content">
@@ -257,13 +284,15 @@
                 name="name"
                 id="callbackName"
                 placeholder="Ваше имя"
+                required
               />
               <input
                 class="callback__form-input"
-                type="text"
+                type="email"
                 name="email"
                 id="callbackEmail"
                 placeholder="Email"
+                required
               />
             </fieldset>
 
@@ -284,6 +313,7 @@
                   type="checkbox"
                   name="agreement"
                   id="callbackAgreement"
+                  required
                 />
                 <span class="callback__form-checkbox-text">
                   Согласие на обработку <a href="#">персональных данных</a>
